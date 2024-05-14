@@ -32,7 +32,7 @@ function back() {
     signup.classList.remove('opacity-100')
     setTimeout(() => {
         login.classList.remove('opacity-0')
-        slider_img.src='/assets/img/sliders.jpg';
+        slider_img.src='assets/img/sliders.jpg';
     }, 500);
 
 }
