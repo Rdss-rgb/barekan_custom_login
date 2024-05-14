@@ -36,7 +36,26 @@ function back() {
     }, 500);
 
 }
+function nextmobile() {
+    login.classList.add('opacity-0')
+    setTimeout(() => {
+        login.classList.add('hidden')
+        signup.classList.remove('hidden')
+        signup.classList.add('opacity-100')
+       
+    }, 500);
+}
+function backmobile() {
+    signup.classList.remove('opacity-100')
+    setTimeout(() => {
+        login.classList.remove('opacity-0')
+        login.classList.remove('hidden')
+        signup.classList.add('opacity-100')
+        signup.classList.add('hidden')
 
+    }, 500);
+
+}
 
 showpass.addEventListener('click',()=>{
     if(stats==true){
