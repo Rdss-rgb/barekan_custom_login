@@ -21,7 +21,7 @@ function next() {
     slider.style.transform = 'translateX(120%)';
     login.classList.add('opacity-0')
     setTimeout(() => {
-        slider_img.src='/assets/img/img1.jpg';
+        slider_img.src='assets/img/img1.jpg';
         signup.classList.add('opacity-100')
         signup.classList.add('z-50')
     }, 500);
