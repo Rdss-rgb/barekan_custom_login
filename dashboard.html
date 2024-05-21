@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="assets/img/barek.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/modules/price-indicator.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+<body>
+    <div class="min-h-dvh bg-gray-200 flex relative">
+        <div class="fixed min-h-dvh w-20 flex justify-center items-center p-1 bg-transparent overflow-hidden z-50" id="parent-nav">
+            <div class="min-h-2/4 w-full rounded-xl bg-yellow-500 flex flex-col justify-inherit items-evenly gap-1 overflow-x-hidden cursor-pointer p-2" style="height: 500px; transition: ease-in-out 500ms;" id="side-nav">
+            <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all active"><span class="home hover:scale-125 transition-transform"></span></div>
+            <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="chart hover:scale-125 transition-transform"></span></div>
+            <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="shop-cart hover:scale-125 transition-transform"></span></div>
+            <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="shop-bag hover:scale-125 transition-transform"></span></div>
+            <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="delivery hover:scale-125 transition-transform"></span></div>
+            <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="settings hover:scale-125 transition-transform"></span></div>
+            <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="user hover:scale-125 transition-transform"></span></div>
+            <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="info hover:scale-125 transition-transform"></span></div>
+        </div>
+        </div>
+        <div class="fixed bottom-0 h-16 w-full flex justify-center items-center bg-transparent overflow-hidden z-50 hidden p-2 md:p-0" id="parent-nav-bot">
+            <div class="min-h-16 w-full md:w-2/4 rounded-md flex overflow-y-hidden bg-yellow-500 cursor-pointer gap-1 rounded-b-sm border-2 border-gray-300" style="height: 60px; transition: ease-in-out 500ms;" id="bottom-nav">
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all active"><span class="home hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="chart hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="shop-cart hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="shop-bag hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="delivery hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="settings hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="user hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="info hover:scale-125 transition-transform"></span></div>
+        </div>
+        </div>
+
+        <div class="fixed right-0 min-h-dvh w-20 flex justify-center items-center p-1 bg-transparent overflow-hidden z-40 hidden" id="parent-nav-right">
+            <div class="min-h-2/4 w-full rounded-xl bg-yellow-500 flex flex-col justify-center items-evenly gap-1 overflow-x-hidden cursor-pointer p-2 " style="height: 500px; transition: ease-in-out 500ms;" id="right-nav">
+                <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all active"><span class="home hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="chart hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="shop-cart hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="shop-bag hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="delivery hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="settings hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="user hover:scale-125 transition-transform"></span></div>
+                    <div class="w-full p-1 flex justify-center items-center rounded-lg hover:bg-yellow-600 transition-all"><span class="info hover:scale-125 transition-transform"></span></div>
+        </div>
+        </div>
+
+
+
+        <div class="relative w-full text-2xl flex flex-col">
+            <nav class="w-full bg-yellow-500 text-slate-700 flex justify-between p-5 fixed z-50">
+                <div class="flex"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.1" d="M8.976 3C4.05476 3 3 4.05476 3 8.976V15.024C3 19.9452 4.05476 21 8.976 21H9V9H21V8.976C21 4.05476 19.9452 3 15.024 3H8.976Z" fill="gray"></path> <path d="M3 8.976C3 4.05476 4.05476 3 8.976 3H15.024C19.9452 3 21 4.05476 21 8.976V15.024C21 19.9452 19.9452 21 15.024 21H8.976C4.05476 21 3 19.9452 3 15.024V8.976Z" stroke="gray" stroke-width="2"></path> <path d="M21 9L3 9" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 21L9 9" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    Dashboard</div>
+                <div class="relative z-50" onclick="togglesettings()">
+                    <div class="w-full flex justify-center items-center rounded-lg"><span class="slider"></span></div>
+                <div class="absolute top-10 w-64 right-1 bg-slate-100 hidden p-2 rounded-md" id="settingspage">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-sm">Navigation settings </span>
+                        <div class="flex gap-2 ">
+                            <span onclick="setnav('left')" class="bg-yellow-500 text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded cursor-pointer" id="left">Left</span>
+                            <span onclick="setnav('right')" class="text-xs font-medium me-2 px-2.5 py-0.5 rounded cursor-pointer" id="right">right</span>
+                            <span onclick="setnav('bottom')" class="text-xs font-medium me-2 px-2.5 py-0.5 rounded cursor-pointer" id="bottom">bottom</span>
+                        </div>
+                    </div>
+                    <hr class="h-2 mt-2">
+                    <span class="text-sm">Navigation state : </span>
+                    <span onclick="fixed(this)" class="bg-orange-500 p-1 font-medium text-xs me-2 px-2.5 py-0.5 rounded text-white cursor-pointer" id="fixed-btn">Fixed</span>
+                    <span onclick="notfixed(this)" class="hidden bg-orange-500 p-1 font-medium text-xs me-2 px-2.5 py-0.5 rounded text-white cursor-pointer" id="crazy-btn">Animated</span>
+                    <span class="text-sm cursor-pointer w-full flex justify-center mt-5" onclick="logout()">
+                        <div class="bg-yellow-500 rounded-full w-12 h-12 flex justify-center items-center hover:bg-yellow-600"> 
+                            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M15.9998 2L14.9998 2C12.1714 2 10.7576 2.00023 9.87891 2.87891C9.00023 3.75759 9.00023 5.1718 9.00023 8.00023L9.00023 16.0002C9.00023 18.8287 9.00023 20.2429 9.87891 21.1215C10.7574 22 12.1706 22 14.9976 22L14.9998 22L15.9998 22C18.8282 22 20.2424 22 21.1211 21.1213C21.9998 20.2426 21.9998 18.8284 21.9998 16L21.9998 8L21.9998 7.99998C21.9998 5.17157 21.9998 3.75736 21.1211 2.87868C20.2424 2 18.8282 2 15.9998 2Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M15.75 12C15.75 11.5858 15.4142 11.25 15 11.25L4.02744 11.25L5.98809 9.56943C6.30259 9.29986 6.33901 8.82639 6.06944 8.51189C5.79988 8.1974 5.3264 8.16098 5.01191 8.43054L1.51191 11.4305C1.34567 11.573 1.25 11.781 1.25 12C1.25 12.2189 1.34567 12.4269 1.51191 12.5694L5.01191 15.5694C5.3264 15.839 5.79988 15.8026 6.06944 15.4881C6.33901 15.1736 6.30259 14.7001 5.98809 14.4305L4.02744 12.75L15 12.75C15.4142 12.75 15.75 12.4142 15.75 12Z" fill="white"></path> </g></svg>
+                        </div>
+                         </span>
+                    
+                </div>
+                </div>
+              
+            </nav>
+            <main class="mt-16 w-full p-5 md:p-10 md:px-32 flex flex-wrap">
+                <div id="container" class="p-5 w-full bg-white rounded-lg "></div>
+                <div class="flex w-full flex-wrap md:flex-nowrap  gap-3 justify-between">
+                    <div id="pie" class="p-5 w-full md:w-4/12 bg-white rounded-lg mt-5"></div>
+                    <div id="container1" class="p-5 w-full md:w-4/12 bg-white rounded-lg mt-5"></div>
+                    <div id="container2" class="p-5 w-full md:w-4/12 bg-white rounded-lg mt-5"></div>
+                </div>
+              
+            </main>
+          
+        </div>
+
+     </div>
+</body>
+<script src="assets/js/dashboard.js"></script>
+</html>
+
