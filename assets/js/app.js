@@ -124,7 +124,7 @@ function submit(e) {
         if (email.value === "admin@gmail.com" && password.value === "admin") {
 
             setTimeout(() => {
-                window.location = "dashboard.html";
+                window.location = "home.html";
             }, 2000);
 
         }
