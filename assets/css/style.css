@@ -70,63 +70,63 @@ html::-webkit-scrollbar {
 }
 
 .home{
-    background-image: url('/assets/svg/grid.svg');
+    background-image: url('assets/svg/grid.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
     height: 50px;
 }
 .chart{
-    background-image: url('/assets/svg/pie-chart.svg');
+    background-image: url('assets/svg/pie-chart.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
     height: 50px;
 }
 .info{
-    background-image: url('/assets/svg/info.svg');
+    background-image: url('assets/svg/info.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
     height: 50px;
 }
 .settings{
-    background-image: url('/assets/svg/settings.svg');
+    background-image: url('assets/svg/settings.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
     height: 50px;
 }
 .user{
-    background-image: url('/assets/svg/user.svg');
+    background-image: url('assets/svg/user.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
     height: 50px;
 }
 .shop-bag{
-    background-image: url('/assets/svg/shopping-bag.svg');
+    background-image: url('assets/svg/shopping-bag.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
     height: 50px;
 }
 .shop-cart{
-    background-image: url('/assets/svg/shopping-cart.svg');
+    background-image: url('assets/svg/shopping-cart.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
     height: 50px;
 }
 .delivery{
-    background-image: url('/assets/svg/truck.svg');
+    background-image: url('assets/svg/truck.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
     height: 50px;
 }
 .slider{
-    background-image: url('/assets/svg/sliders.svg');
+    background-image: url('assets/svg/sliders.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
